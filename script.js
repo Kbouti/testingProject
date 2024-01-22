@@ -1,4 +1,4 @@
-console.log(`Testing is here`)
+console.log(`Testing is here`);
 
 function sum(a, b) {
   return a + b;
@@ -11,10 +11,21 @@ function capitalize(string) {
   return firstLetter + string;
 }
 
-console.log(capitalize(`asshole`))
+function reverseString(string) {
+  let newString = "";
 
-module.exports = {
-    sum,
-    capitalize
+  let splitString = string.split();
+  for (let i = splitString.length - 1; i >= 0; i--) {
+    console.log(splitString[i]);
+    newString += splitString[i];
+  }
+  return newString;
 }
 
+reverseString(`peanuts`);
+
+module.exports = {
+  sum,
+  capitalize,
+  reverseString,
+};
