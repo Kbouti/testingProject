@@ -13,10 +13,8 @@ function capitalize(string) {
 
 function reverseString(string) {
   let newString = "";
-
-  let splitString = string.split();
+  let splitString = string.split("");
   for (let i = splitString.length - 1; i >= 0; i--) {
-    console.log(splitString[i]);
     newString += splitString[i];
   }
   return newString;
