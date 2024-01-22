@@ -1,3 +1,5 @@
+console.log(`Testing is here`)
+
 function sum(a, b) {
   return a + b;
 }
@@ -8,5 +10,8 @@ function capitalize(string) {
   string = string.slice(1);
   return firstLetter + string;
 }
+
+console.log(capitalize(`asshole`))
+
 
 module.exports = sum, capitalize
