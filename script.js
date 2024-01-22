@@ -13,5 +13,8 @@ function capitalize(string) {
 
 console.log(capitalize(`asshole`))
 
+module.exports = {
+    sum,
+    capitalize
+}
 
-module.exports = sum, capitalize
