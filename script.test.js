@@ -11,6 +11,14 @@ test(`adds  1 + 3  to equal 4`, () =>{
 })
 
 
-test(`takes "asshole" and returns "Asshole"`, () =>{
+test(`Takes "asshole" and returns "Asshole"`, () =>{
     expect(myFunctions.capitalize(`asshole`)).toMatch(`Asshole`);
+})
+
+test(`Takes "poop" and returns "Poop"`, () =>{
+    expect(myFunctions.capitalize(`poop`)).toMatch(`Poop`);
+})
+
+test(`takes in "god" and returns "dog"`, () => {
+    expect(myFunctions.reverseString(`god`)).toMatch(`dog`);
 })
