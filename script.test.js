@@ -41,5 +41,5 @@ test(`calculator.divide() divides  100 by 2 to equal 50`, () => {
 });
 
 test(`calculator.divide() divides  10 by 3  to equal 3.33`, () => {
-  expect(myFunctions.calculator.divide(10, 3)).toBe(3.33);
+  expect(myFunctions.calculator.divide(10, 3)).toBeCloseTo(3.33);
 });

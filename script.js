@@ -36,9 +36,9 @@ calculator.subtract = function(a, b){
 }
 
 calculator.divide = function(a, b){
-    return a / b;
+    let result = a / b;
+    return result;
 }
-
 
 
 
