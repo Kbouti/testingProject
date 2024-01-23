@@ -46,13 +46,6 @@ calculator.multiply = function (a, b) {
 // **********************************************************************
 // caeserCipher
 
-function caesarCipher(string) {}
-
-let testString = "JoHn";
-testString = testString.toLowerCase()
-console.log(testString);
-let splitString = testString.split("");
-console.log(splitString);
 const alphabet = [
   "a",
   "b",
@@ -81,6 +74,36 @@ const alphabet = [
   "y",
   "z",
 ];
+
+function caesarCipher(string, shiftFactor) {
+  string = string.toLowerCase();
+  let splitString = string.split("");
+
+  console.log(splitString);
+  let stringToNumbers = [];
+
+  for (let i = 0; i < splitString.length; i++) {
+    for (let j = 0; j < alphabet.length; j++) {
+      if (splitString[i] === alphabet[j]) {
+        stringToNumbers.push(j);
+      }
+    }
+  }
+  console.log(stringToNumbers);
+  for (let i = 0; i < stringToNumbers.length; i++) {
+    if (stringToNumbers[i] == 25) {
+      stringToNumbers[i] == 1;
+    } else if (stringToNumbers[i] == 24) {
+      stringToNumbers[i] == 0;
+    } else {
+      stringToNumbers[i] = stringToNumbers + shiftFactor;
+    }
+  }
+  console.log(stringToNumbers);
+
+}
+
+caesarCipher(`dogNuts`, 2);
 
 let alphabetKey = {
   a: 1,
