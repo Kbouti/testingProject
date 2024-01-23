@@ -22,3 +22,8 @@ test(`capitalize() takes "poop" and returns "Poop"`, () =>{
 test(`reverseString() takes in "god" and returns "dog"`, () => {
     expect(myFunctions.reverseString(`god`)).toMatch(`dog`);
 })
+
+
+test(`calculator.sum() adds  1 + 3  to equal 4`, () =>{
+    expect(myFunctions.calculator.add(1, 3)).toBe(4);
+})

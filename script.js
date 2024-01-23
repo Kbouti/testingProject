@@ -22,10 +22,18 @@ function reverseString(string) {
   return newString;
 }
 
-reverseString(`peanuts`);
+
+let calculator = {};
+calculator.add = function (a, b) {
+  return a + b;
+};
+
+
+
 
 module.exports = {
   sum,
   capitalize,
   reverseString,
+  calculator
 };
