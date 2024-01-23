@@ -79,13 +79,13 @@ let regex = /^[a-zA-Z]+$/;
 
 function caesarCipher(string, shiftFactor) {
   let splitString = string.split("");
-console.log(splitString)
-    for (let i = 0; i < splitString.length; i++){
-        splitString[i] = caesarThisCharacter(splitString[i], shiftFactor);
-    }
-    console.log(splitString)
-    let newString = splitString.join("");
-    return newString;
+  console.log(splitString);
+  for (let i = 0; i < splitString.length; i++) {
+    splitString[i] = caesarThisCharacter(splitString[i], shiftFactor);
+  }
+  console.log(splitString);
+  let newString = splitString.join("");
+  return newString;
 }
 
 function caesarThisCharacter(character, shiftFactor) {
@@ -95,7 +95,7 @@ function caesarThisCharacter(character, shiftFactor) {
     let newCharacter;
     let lowerCaseCharacter = character.toLowerCase();
     if (character === lowerCaseCharacter) {
-    //   console.log(`${character} is a lowerCase character`);
+      //   console.log(`${character} is a lowerCase character`);
       for (let i = 0; i < alphabet.length; i++) {
         if (lowerCaseCharacter === alphabet[i]) {
           assignedNumber = i;
@@ -108,7 +108,7 @@ function caesarThisCharacter(character, shiftFactor) {
         }
       }
     } else {
-    //   console.log(`${character} is an upperCase character`);
+      //   console.log(`${character} is an upperCase character`);
       for (let i = 0; i < alphabet.length; i++) {
         if (lowerCaseCharacter === alphabet[i]) {
           assignedNumber = i;
@@ -121,16 +121,32 @@ function caesarThisCharacter(character, shiftFactor) {
         }
       }
     }
-  } else return character
+  } else return character;
 }
 
 // **********************************************************************
 // analyzeArray
 
-    function analyzeArray(array){
+function analyzeArray(array) {
+  let newObject = {
+    average: null,
+    min: null,
+    max: null,
+    length: array.length,
+  };
 
-    }
+  if (array.length == 1){
+    newObject.average = array[0];
+    newObject.min = array[0];
+    newObject.max = array[0];
+    console.log(newObject)
+    return newObject
+  }
+}
 
+
+analyzeArray([4])
+// I'm not sure why this is failing our first test, seems right in the console.
 
 
 // **********************************************************************
@@ -142,5 +158,5 @@ module.exports = {
   reverseString,
   calculator,
   caesarCipher,
-  analyzeArray
+  analyzeArray,
 };
