@@ -101,9 +101,25 @@ function caesarCipher(string, shiftFactor) {
   }
   console.log(stringToNumbers);
 
+// I think we want to write a function that we call on each character
+
 }
 
+let regex = /^[a-zA-Z]+$/;
+
+function caesarThisCharacter(character, shiftFactor){
+    if (regex.test(character)){
+        console.log(`is a character`)
+    } else {
+        console.log(`is not a character`)
+    }
+}
+
+
 caesarCipher(`dogNuts`, 2);
+caesarThisCharacter("g", 4);
+caesarThisCharacter("$", 4);
+
 
 let alphabetKey = {
   a: 1,
