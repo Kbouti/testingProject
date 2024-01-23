@@ -134,17 +134,27 @@ function analyzeArray(array) {
     max: null,
     length: array.length,
   };
-
-  if (array.length == 1){
-    newObject.average = array[0];
-    newObject.min = array[0];
-    newObject.max = array[0];
-    console.log(newObject)
-    return newObject
+  if (array.length < 1) {
+    return newObject;
   }
+  newObject.min = array[0];
+  newObject.max = array[0];
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+    if (newObject.min > array[i]) {
+      newObject.min = array[i];
+    }
+    if (newObject.max < array[i]) {
+      newObject.max = array[i];
+    }
+  }
+  newObject.average = sum / array.length;
+  return newObject;
 }
 
-
+let testObject = analyzeArray([4, 2]);
+console.log(testObject);
 
 // **********************************************************************
 // Exports:
