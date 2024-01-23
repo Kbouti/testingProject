@@ -75,51 +75,59 @@ const alphabet = [
   "z",
 ];
 
-function caesarCipher(string, shiftFactor) {
-  string = string.toLowerCase();
-  let splitString = string.split("");
+let regex = /^[a-zA-Z]+$/;
 
-  console.log(splitString);
-  let stringToNumbers = [];
+// function caesarCipher(string, shiftFactor) {
+//   let splitString = string.split("");
+// console.log(splitString)
+//     for (let i = 0)
+// }
 
-  for (let i = 0; i < splitString.length; i++) {
-    for (let j = 0; j < alphabet.length; j++) {
-      if (splitString[i] === alphabet[j]) {
-        stringToNumbers.push(j);
+function caesarThisCharacter(character, shiftFactor) {
+  if (regex.test(character)) {
+    let assignedNumber;
+    let modifiedNumber;
+    let newCharacter;
+    let lowerCaseCharacter = character.toLowerCase();
+    if (character === lowerCaseCharacter) {
+      console.log(`${character} is a lowerCase character`);
+      for (let i = 0; i < alphabet.length; i++) {
+        if (lowerCaseCharacter === alphabet[i]) {
+          assignedNumber = i;
+          modifiedNumber = i + shiftFactor;
+
+          if (modifiedNumber > 25) {
+            modifiedNumber = modifiedNumber - 25;
+          }
+          newCharacter = alphabet[modifiedNumber];
+          console.log(newCharacter);
+          return newCharacter;
+        }
+      }
+    } else {
+      console.log(`${character} is an upperCase character`);
+      for (let i = 0; i < alphabet.length; i++) {
+        if (lowerCaseCharacter === alphabet[i]) {
+          assignedNumber = i;
+          modifiedNumber = i + shiftFactor;
+
+          if (modifiedNumber > 25) {
+            modifiedNumber = modifiedNumber - 26;
+          }
+          newCharacter = alphabet[modifiedNumber];
+          console.log(newCharacter.toUpperCase());
+          return newCharacter.toUpperCase();
+        }
       }
     }
   }
-  console.log(stringToNumbers);
-  for (let i = 0; i < stringToNumbers.length; i++) {
-    if (stringToNumbers[i] == 25) {
-      stringToNumbers[i] == 1;
-    } else if (stringToNumbers[i] == 24) {
-      stringToNumbers[i] == 0;
-    } else {
-      stringToNumbers[i] = stringToNumbers + shiftFactor;
-    }
-  }
-  console.log(stringToNumbers);
-
-// I think we want to write a function that we call on each character
-
 }
 
-let regex = /^[a-zA-Z]+$/;
+// caesarCipher(`dogNuts`, 2);
+caesarThisCharacter("a", 1);
 
-function caesarThisCharacter(character, shiftFactor){
-    if (regex.test(character)){
-        console.log(`is a character`)
-    } else {
-        console.log(`is not a character`)
-    }
-}
-
-
-caesarCipher(`dogNuts`, 2);
-caesarThisCharacter("g", 4);
+caesarThisCharacter("Z", 1);
 caesarThisCharacter("$", 4);
-
 
 let alphabetKey = {
   a: 1,
