@@ -80,6 +80,16 @@ test(`Test caesarCipher with "You're a moron!, 5"`, () => {
 // ******************************************************************************************
 // analyzeArray tests:
 
+
+test(`AnalyzeArray with empty array`, () => {
+    expect(myFunctions.analyzeArray([]).average).toBe(null);
+    expect(myFunctions.analyzeArray([]).min).toBe(null);
+    expect(myFunctions.analyzeArray([]).max).toBe(null);
+    expect(myFunctions.analyzeArray([]).length).toBe(0);
+  });
+
+
+
 test(`AnalyzeArray with one element`, () => {
     expect(myFunctions.analyzeArray([4]).average).toBe(4);
     expect(myFunctions.analyzeArray([4]).min).toBe(4);
@@ -92,4 +102,11 @@ test(`AnalyzeArray with one element`, () => {
     expect(myFunctions.analyzeArray([4, 2]).min).toBe(2);
     expect(myFunctions.analyzeArray([4, 2]).max).toBe(4);
     expect(myFunctions.analyzeArray([4, 2]).length).toBe(2);
+  });
+
+  test(`AnalyzeArray with four elements`, () => {
+    expect(myFunctions.analyzeArray([4, 2, 6, 0]).average).toBe(3);
+    expect(myFunctions.analyzeArray([4, 2, 6, 0]).min).toBe(0);
+    expect(myFunctions.analyzeArray([4, 2, 6, 0]).max).toBe(6);
+    expect(myFunctions.analyzeArray([4, 2, 6, 0]).length).toBe(4);
   });
