@@ -101,7 +101,7 @@ function caesarThisCharacter(character, shiftFactor) {
           assignedNumber = i;
           modifiedNumber = i + shiftFactor;
           if (modifiedNumber > 25) {
-            modifiedNumber = modifiedNumber - 25;
+            modifiedNumber = modifiedNumber - 26;
           }
           newCharacter = alphabet[modifiedNumber];
           return newCharacter;
@@ -121,7 +121,7 @@ function caesarThisCharacter(character, shiftFactor) {
         }
       }
     }
-  }
+  } else return character
 }
 
 caesarCipher(`dogNuts`, 2);

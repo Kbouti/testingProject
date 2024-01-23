@@ -52,12 +52,21 @@ test(`calculator.multiply() multiplies  10 by 0  to equal 0`, () => {
   expect(myFunctions.calculator.multiply(10, 0)).toBe(0);
 });
 
-
 // ******************************************************************************************
 // caesarCipher tests:
 
 test(`Test caesarCipher with "Shitbag, 2"`, () => {
-    expect(myFunctions.caesarCipher(`Shitbag`, 2)).toBe(`Ujkvdci`);
-  });
-  
+  expect(myFunctions.caesarCipher(`Shitbag`, 2)).toBe(`Ujkvdci`);
+});
 
+test(`Test caesarCipher with "dogFart, 3"`, () => {
+  expect(myFunctions.caesarCipher(`dogFart`, 3)).toBe(`grjIduw`);
+});
+
+test(`Test caesarCipher with "b3wbz, 3"`, () => {
+  expect(myFunctions.caesarCipher(`b3wbz`, 3)).toBe(`e3zec`);
+});
+
+test(`Test caesarCipher with "yzZ, 1"`, () => {
+  expect(myFunctions.caesarCipher(`yzZ`, 1)).toBe(`zaA`);
+});
