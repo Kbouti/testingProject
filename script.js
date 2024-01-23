@@ -22,11 +22,23 @@ function reverseString(string) {
   return newString;
 }
 
+// **********************************************************************
+// Calculator:
 
 let calculator = {};
+
 calculator.add = function (a, b) {
   return a + b;
 };
+
+calculator.subtract = function(a, b){
+    return a - b;
+}
+
+calculator.divide = function(a, b){
+    return a / b;
+}
+
 
 
 
