@@ -1,8 +1,12 @@
-console.log(`Testing is here`);
+// **********************************************************************
+// Sum:
 
 function sum(a, b) {
   return a + b;
 }
+
+// **********************************************************************
+// Capitalize:
 
 function capitalize(string) {
   let firstLetter = string.charAt(0);
@@ -10,6 +14,9 @@ function capitalize(string) {
   string = string.slice(1);
   return firstLetter + string;
 }
+
+// **********************************************************************
+// ReverseString:
 
 function reverseString(string) {
   let newString = "";
@@ -79,11 +86,9 @@ let regex = /^[a-zA-Z]+$/;
 
 function caesarCipher(string, shiftFactor) {
   let splitString = string.split("");
-  console.log(splitString);
   for (let i = 0; i < splitString.length; i++) {
     splitString[i] = caesarThisCharacter(splitString[i], shiftFactor);
   }
-  console.log(splitString);
   let newString = splitString.join("");
   return newString;
 }
@@ -95,7 +100,6 @@ function caesarThisCharacter(character, shiftFactor) {
     let newCharacter;
     let lowerCaseCharacter = character.toLowerCase();
     if (character === lowerCaseCharacter) {
-      //   console.log(`${character} is a lowerCase character`);
       for (let i = 0; i < alphabet.length; i++) {
         if (lowerCaseCharacter === alphabet[i]) {
           assignedNumber = i;
@@ -108,7 +112,6 @@ function caesarThisCharacter(character, shiftFactor) {
         }
       }
     } else {
-      //   console.log(`${character} is an upperCase character`);
       for (let i = 0; i < alphabet.length; i++) {
         if (lowerCaseCharacter === alphabet[i]) {
           assignedNumber = i;
@@ -153,7 +156,7 @@ function analyzeArray(array) {
   return newObject;
 }
 
-let testObject = analyzeArray([4, 2]);
+let testObject = analyzeArray([4, 2, 45, 2, 6, 7543, 5, 7]);
 console.log(testObject);
 
 // **********************************************************************
