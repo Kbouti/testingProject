@@ -86,3 +86,10 @@ test(`AnalyzeArray with one element`, () => {
     expect(myFunctions.analyzeArray([4]).max).toBe(4);
     expect(myFunctions.analyzeArray([4]).length).toBe(1);
   });
+
+  test(`AnalyzeArray with two elements`, () => {
+    expect(myFunctions.analyzeArray([4, 2]).average).toBe(3);
+    expect(myFunctions.analyzeArray([4, 2]).min).toBe(2);
+    expect(myFunctions.analyzeArray([4, 2]).max).toBe(4);
+    expect(myFunctions.analyzeArray([4, 2]).length).toBe(2);
+  });
