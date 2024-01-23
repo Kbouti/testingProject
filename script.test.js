@@ -43,3 +43,11 @@ test(`calculator.divide() divides  100 by 2 to equal 50`, () => {
 test(`calculator.divide() divides  10 by 3  to equal 3.33`, () => {
   expect(myFunctions.calculator.divide(10, 3)).toBeCloseTo(3.33);
 });
+
+test(`calculator.multiply() multiplies  10 by 3  to equal 30`, () => {
+  expect(myFunctions.calculator.multiply(10, 3)).toBe(30);
+});
+
+test(`calculator.multiply() multiplies  10 by 0  to equal 0`, () => {
+  expect(myFunctions.calculator.multiply(10, 0)).toBe(0);
+});

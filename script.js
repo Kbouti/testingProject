@@ -40,6 +40,10 @@ calculator.divide = function(a, b){
     return result;
 }
 
+calculator.multiply = function(a, b){
+    let result = a * b;
+    return result;
+}
 
 
 
