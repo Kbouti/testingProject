@@ -35,3 +35,11 @@ test(`calculator.add() adds  1 + 3  to equal 4`, () => {
 test(`calculator.subtract() subtracts  10 - 3  to equal 7`, () => {
   expect(myFunctions.calculator.subtract(10, 3)).toBe(7);
 });
+
+test(`calculator.divide() divides  100 by 2 to equal 50`, () => {
+  expect(myFunctions.calculator.divide(100, 2)).toBe(50);
+});
+
+test(`calculator.divide() divides  10 by 3  to equal 3.33`, () => {
+  expect(myFunctions.calculator.divide(10, 3)).toBe(3.33);
+});
