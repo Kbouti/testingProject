@@ -24,6 +24,10 @@ test(`reverseString() takes in "god" and returns "dog"`, () => {
 })
 
 
-test(`calculator.sum() adds  1 + 3  to equal 4`, () =>{
+test(`calculator.add() adds  1 + 3  to equal 4`, () =>{
     expect(myFunctions.calculator.add(1, 3)).toBe(4);
+})
+
+test(`calculator.subtract() subtracts  10 - 3  to equal 7`, () =>{
+    expect(myFunctions.calculator.subtract(10, 3)).toBe(7);
 })
