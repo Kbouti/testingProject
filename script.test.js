@@ -51,3 +51,13 @@ test(`calculator.multiply() multiplies  10 by 3  to equal 30`, () => {
 test(`calculator.multiply() multiplies  10 by 0  to equal 0`, () => {
   expect(myFunctions.calculator.multiply(10, 0)).toBe(0);
 });
+
+
+// ******************************************************************************************
+// caesarCipher tests:
+
+test(`Test caesarCipher with "Shitbag, 2"`, () => {
+    expect(myFunctions.caesarCipher(`Shitbag`, 2)).toBe(`Ujkvdci`);
+  });
+  
+

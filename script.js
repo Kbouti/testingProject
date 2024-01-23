@@ -45,11 +45,18 @@ calculator.multiply = function(a, b){
     return result;
 }
 
+// **********************************************************************
+// caeserCipher
+
+function caesarCipher(string){
+
+}
 
 
 module.exports = {
   sum,
   capitalize,
   reverseString,
-  calculator
+  calculator,
+  caesarCipher
 };
