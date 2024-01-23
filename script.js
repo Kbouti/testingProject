@@ -77,11 +77,16 @@ const alphabet = [
 
 let regex = /^[a-zA-Z]+$/;
 
-// function caesarCipher(string, shiftFactor) {
-//   let splitString = string.split("");
-// console.log(splitString)
-//     for (let i = 0)
-// }
+function caesarCipher(string, shiftFactor) {
+  let splitString = string.split("");
+console.log(splitString)
+    for (let i = 0; i < splitString.length; i++){
+        splitString[i] = caesarThisCharacter(splitString[i], shiftFactor);
+    }
+    console.log(splitString)
+    let newString = splitString.join("");
+    return newString;
+}
 
 function caesarThisCharacter(character, shiftFactor) {
   if (regex.test(character)) {
@@ -90,32 +95,28 @@ function caesarThisCharacter(character, shiftFactor) {
     let newCharacter;
     let lowerCaseCharacter = character.toLowerCase();
     if (character === lowerCaseCharacter) {
-      console.log(`${character} is a lowerCase character`);
+    //   console.log(`${character} is a lowerCase character`);
       for (let i = 0; i < alphabet.length; i++) {
         if (lowerCaseCharacter === alphabet[i]) {
           assignedNumber = i;
           modifiedNumber = i + shiftFactor;
-
           if (modifiedNumber > 25) {
             modifiedNumber = modifiedNumber - 25;
           }
           newCharacter = alphabet[modifiedNumber];
-          console.log(newCharacter);
           return newCharacter;
         }
       }
     } else {
-      console.log(`${character} is an upperCase character`);
+    //   console.log(`${character} is an upperCase character`);
       for (let i = 0; i < alphabet.length; i++) {
         if (lowerCaseCharacter === alphabet[i]) {
           assignedNumber = i;
           modifiedNumber = i + shiftFactor;
-
           if (modifiedNumber > 25) {
             modifiedNumber = modifiedNumber - 26;
           }
           newCharacter = alphabet[modifiedNumber];
-          console.log(newCharacter.toUpperCase());
           return newCharacter.toUpperCase();
         }
       }
@@ -123,40 +124,13 @@ function caesarThisCharacter(character, shiftFactor) {
   }
 }
 
-// caesarCipher(`dogNuts`, 2);
-caesarThisCharacter("a", 1);
+caesarCipher(`dogNuts`, 2);
+console.log(caesarCipher(`Shitbag`, 2))
 
-caesarThisCharacter("Z", 1);
-caesarThisCharacter("$", 4);
+// caesarThisCharacter("a", 1);
+// caesarThisCharacter("Z", 1);
+// caesarThisCharacter("$", 4);
 
-let alphabetKey = {
-  a: 1,
-  b: 2,
-  c: 3,
-  d: 4,
-  e: 5,
-  f: 6,
-  g: 7,
-  h: 8,
-  i: 9,
-  j: 10,
-  k: 11,
-  l: 12,
-  m: 13,
-  n: 14,
-  o: 15,
-  p: 16,
-  q: 17,
-  r: 18,
-  s: 19,
-  t: 20,
-  u: 21,
-  v: 22,
-  w: 23,
-  x: 24,
-  y: 25,
-  z: 26,
-};
 
 module.exports = {
   sum,
