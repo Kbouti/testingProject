@@ -70,3 +70,8 @@ test(`Test caesarCipher with "b3wbz, 3"`, () => {
 test(`Test caesarCipher with "yzZ, 1"`, () => {
   expect(myFunctions.caesarCipher(`yzZ`, 1)).toBe(`zaA`);
 });
+
+test(`Test caesarCipher with "You're a moron!, 5"`, () => {
+    expect(myFunctions.caesarCipher(`You're a moron!`, 5)).toBe(`Dtz'wj f rtwts!`);
+  });
+  
