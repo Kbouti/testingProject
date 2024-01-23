@@ -124,13 +124,17 @@ function caesarThisCharacter(character, shiftFactor) {
   } else return character
 }
 
-caesarCipher(`dogNuts`, 2);
-console.log(caesarCipher(`Shitbag`, 2))
+// **********************************************************************
+// analyzeArray
 
-// caesarThisCharacter("a", 1);
-// caesarThisCharacter("Z", 1);
-// caesarThisCharacter("$", 4);
+    function analyzeArray(array){
 
+    }
+
+
+
+// **********************************************************************
+// Exports:
 
 module.exports = {
   sum,
@@ -138,4 +142,5 @@ module.exports = {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray
 };

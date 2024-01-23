@@ -72,6 +72,21 @@ test(`Test caesarCipher with "yzZ, 1"`, () => {
 });
 
 test(`Test caesarCipher with "You're a moron!, 5"`, () => {
-    expect(myFunctions.caesarCipher(`You're a moron!`, 5)).toBe(`Dtz'wj f rtwts!`);
+  expect(myFunctions.caesarCipher(`You're a moron!`, 5)).toBe(
+    `Dtz'wj f rtwts!`
+  );
+});
+
+// ******************************************************************************************
+// analyzeArray tests:
+
+test(`AnalyzeArray with one element`, () => {
+    expect(myFunctions.analyzeArray([4])).toBe(
+      {
+        average: 4,
+        min: 4,
+        max: 4, 
+        length: 1
+      }
+    );
   });
-  
