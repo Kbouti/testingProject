@@ -145,9 +145,6 @@ function analyzeArray(array) {
 }
 
 
-analyzeArray([4])
-// I'm not sure why this is failing our first test, seems right in the console.
-
 
 // **********************************************************************
 // Exports:
